@@ -1,0 +1,319 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4a1d96 0%, #000000 50%, #4a1d96 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Countdown Visibility */
+.countdown-container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* Initial Countdown Number */
+.initial-number {
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: bold;
+  background: linear-gradient(to right, #ec4899, #eab308);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Get Ready Text */
+.get-ready {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: white;
+  margin-top: 1rem;
+}
+
+/* Countdown Timer */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timer-icon {
+  width: clamp(2rem, 5vw, 3rem);
+  height: clamp(2rem, 5vw, 3rem);
+  margin-right: 1rem;
+  color: #eab308;
+  animation: spin 3s linear infinite;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: bold;
+  color: white;
+}
+
+/* Timer Grid */
+.timer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timer-card {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #ec4899, #eab308);
+  border-radius: 0.5rem;
+  filter: blur(15px);
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.timer-card:hover .glow {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  background: black;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.number {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  background: linear-gradient(to right, #ec4899, #eab308);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.deadline .number {
+  background: linear-gradient(to right, #ff0000, #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.label {
+  color: white;
+  margin-top: 0.5rem;
+}
+
+/* Quote Styles */
+.quote-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote {
+  color: white;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-style: italic;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* "Let's Go" Section */
+.lets-go {
+  margin-top: 2rem;
+  color: white;
+  animation: scaleIn 0.5s forwards;
+}
+
+.lets-go h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(to right, #ec4899, #eab308);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.lets-go p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #f472b6;
+}
+
+/* Confetti Effects */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.blast {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Block Letters */
+.block-letters {
+  display: inline-block;
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: bolder;
+  color:#AE8625;
+  white-space: nowrap;
+}
+
+.block-letter {
+  display: inline-block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  opacity: 0;
+}
+
+.block-letter:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.block-letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.block-letter:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.block-letter:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.block-letter:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.block-letter:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.block-letter:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.block-letter:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.block-letter:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.block-letter:nth-child(10) {
+  animation-delay: 1.0s;
+}
+.block-letter:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes blastOut {
+  0% {
+    transform: scale(0) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .timer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .timer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

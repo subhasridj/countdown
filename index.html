@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechDivathon Countdown</title>
+  <link rel="icon" type="image/png" href="tdlogo.png"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="initial-countdown" class="countdown-container">
+      <div class="initial-number">10</div>
+      <p class="get-ready">Get Ready!</p>
+    </div>
+    <button id="start-button" class="hidden">Start Countdown</button>
+<audio id="blast-sound" src="blast-sound.mp3" preload="auto"></audio>
+<div id="techdivathon-animation" class="hidden">
+  <h1 class="block-letters">T<span class="block-letter">e</span><span class="block-letter">c</span><span class="block-letter">h</span><span class="block-letter">D</span><span class="block-letter">i</span><span class="block-letter">v</span><span class="block-letter">a</span><span class="block-letter">t</span><span class="block-letter">h</span><span class="block-letter">o</span><span class="block-letter">n</span></h1>
+</div>
+
+
+
+
+    <div id="main-countdown" class="countdown-container hidden">
+      <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="timer-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h1>TechDivathon</h1>
+      </div>
+      
+      <div class="timer-grid">
+        <div class="timer-card">
+          <div class="glow"></div>
+          <div class="content">
+            <div class="number" id="hours">24</div>
+            <div class="label">Hours</div>
+          </div>
+        </div>
+        
+        <div class="timer-card">
+          <div class="glow"></div>
+          <div class="content">
+            <div class="number" id="minutes">00</div>
+            <div class="label">Minutes</div>
+          </div>
+        </div>
+        
+        <div class="timer-card">
+          <div class="glow"></div>
+          <div class="content">
+            <div class="number" id="seconds">00</div>
+            <div class="label">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="quote-container" class="quote-container">
+        <p id="quote" class="quote"></p>
+      </div>
+
+      <div id="lets-go" class="lets-go hidden">
+        <h2>Let's Go!</h2>
+        <p>Time to showcase your amazing skills!</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
